@@ -1,0 +1,185 @@
+✈️ Flight Booking System — PRACTICE SETUP
+⏱️ Total Time: 90 minutes
+
+You should consciously manage time like this:
+
+Phase	Time
+Clarify requirements	10 min
+Identify entities & APIs	15 min
+Core data structures	15 min
+Route algorithms	25 min
+CLI handling + demo	15 min
+Buffer / refactor	10 min
+📌 Functional Requirements (STRICT)
+1️⃣ Flight Registration
+
+Airlines can register direct flights
+
+A flight has:
+
+Airline name
+
+Source city
+
+Destination city
+
+Price
+
+Optional features (e.g., hasMeal)
+
+(Optional later) departure/arrival time
+
+Input format (CLI-style)
+register AirlineName SourceCity DestinationCity Price [hasMeal]
+
+Output
+AirlineName SourceCity -> DestinationCity flight registered
+
+2️⃣ Flight Search
+
+Customers can search routes between two cities.
+
+Input format
+search SourceCity DestinationCity [hasMeal]
+
+Output must contain exactly TWO routes (if available):
+✈️ Route with Minimum Number of Hops
+
+Minimize number of flights
+
+If multiple exist, return any one
+
+Cost is secondary (ignored unless needed for output)
+
+💸 Route with Lowest Total Cost
+
+Minimize total price
+
+Number of hops is secondary
+
+✅ Filters
+
+If hasMeal=true is passed:
+
+All flights in the route must support meals
+
+Filter applies to both results
+
+🧠 Algorithmic Requirements (IMPORTANT)
+
+Flights form a directed graph
+
+Cities are nodes
+
+Flights are edges
+
+Graph is in-memory only
+
+You must support:
+
+Graph traversal
+
+Different optimization criteria:
+
+Min hops
+
+Min cost
+
+🚫 Explicit Constraints
+
+❌ No database
+
+❌ No frameworks (Spring, Lombok, etc.)
+
+❌ No external libraries for graphs
+
+❌ No internet
+
+❌ No UI
+
+✅ Plain Java / in-memory objects only
+
+🧱 Non-Functional Requirements
+
+Code must be:
+
+Modular
+
+Readable
+
+Extensible
+
+Should be demoable via CLI inputs
+
+Should handle:
+
+No route found
+
+Source = destination
+
+Cycles in graph
+
+Multiple airlines on same route
+
+🔍 Edge Cases You MUST Think About
+
+Do NOT code yet, but be ready to handle:
+
+No path exists
+
+Multiple flights between same cities
+
+Cyclic routes (e.g., DEL → BLR → DEL)
+
+Filter eliminates all paths
+
+Source or destination not registered
+
+Same city appearing multiple times in path (avoid infinite loops)
+
+🧩 Out of Scope (DO NOT IMPLEMENT unless asked)
+
+Seat availability
+
+Booking / payment
+
+User accounts
+
+Persistence
+
+Cancellation
+
+Dynamic pricing
+
+🧪 Sample Commands (for your own testing)
+register JetAir DEL BLR 500 true
+register JetAir BLR LON 1000 true
+register Delta DEL LON 2000 true
+register Delta LON NYC 2000 true
+
+search DEL NYC
+search DEL NYC true
+
+🎯 Interviewer Expectations (READ CAREFULLY)
+
+They will judge you on:
+
+Requirement clarity (did you ask/assume correctly?)
+
+Entity modeling (Flight, Route, Graph, etc.)
+
+Algorithm choice (BFS vs Dijkstra — but don’t jump early)
+
+Separation of concerns
+
+How you explain tradeoffs
+
+❗ VERY IMPORTANT RULE FOR THIS PRACTICE
+
+👉 Do NOT over-engineer
+
+No patterns for the sake of patterns
+
+No premature optimization
+
+Keep it simple and correct

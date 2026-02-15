@@ -1,0 +1,65 @@
+🧩 Likely Microsoft LLD Question (Reconstructed)
+📌 Problem Theme
+
+Design an Organization Hierarchy System
+
+Where:
+
+Employees belong to a hierarchical organization
+
+Each employee has at most one manager
+
+A manager can have multiple direct reports
+
+🔥 The Twist (Important)
+
+If a manager is removed,
+all employees under that manager should be re-assigned correctly.
+
+This is the key difficulty.
+
+📌 Typical Problem Statement (Microsoft-style)
+
+Design a system to represent an organization hierarchy.
+
+Each employee has:
+
+employeeId
+
+name
+
+managerId (null for CEO)
+
+The system should support:
+
+Add employee
+
+Remove employee
+
+Get manager of an employee
+
+Get all subordinates of an employee
+
+If a manager is removed, all direct reports should be re-assigned to the removed manager’s manager
+
+🧠 Example (THIS is what interviewer usually gives)
+Initial hierarchy
+CEO
+ └── A
+     ├── B
+     │   ├── D
+     │   └── E
+     └── C
+
+Remove manager A
+
+Result:
+
+CEO
+ ├── B
+ │   ├── D
+ │   └── E
+ └── C
+
+
+👉 B and C now report directly to CEO
