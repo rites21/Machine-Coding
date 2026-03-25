@@ -6,9 +6,9 @@ import com.ritesh.lld.BookMyShow.Strategies.PaymentSTratiges;
 import com.ritesh.lld.BookMyShow.Strategies.UpiPayment;
 
 public class PaymentService {
-    private Payment payment;
-    private PaymentSTratiges paymentSTratiges;
-    private User user;
+    private final Payment payment;
+    private final PaymentSTratiges paymentSTratiges;
+    private final User user;
 
     public PaymentService(Payment payment, PaymentSTratiges paymentSTratiges, User user) {
         this.payment = payment;
