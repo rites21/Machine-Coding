@@ -1,0 +1,147 @@
+🟢 Restaurant Booking System — REQUIREMENTS (Amazon SDE-2 Style)
+0️⃣ How Amazon expects you to start (say this aloud)
+
+“I’ll first clarify functional requirements and scope the problem before designing.”
+
+That sentence itself is a positive signal.
+
+1️⃣ Functional Requirements (CORE)
+
+These are the must-have features. Say them clearly.
+
+Booking related
+
+User should be able to search restaurants
+
+User should be able to view restaurant details
+
+User should be able to check table availability for a given date & time
+
+User should be able to make a reservation
+
+User should be able to cancel a reservation
+
+System should prevent double booking of tables
+
+Restaurant / Table related
+
+A restaurant has multiple tables
+
+Tables have capacity (number of seats)
+
+Booking is made for:
+
+date
+
+time slot
+
+number of guests
+
+Constraints (important)
+
+A booking is valid for a fixed duration (e.g., 1 or 2 hours)
+
+Restaurant can choose operating hours
+
+Booking should only be allowed during operating hours
+
+2️⃣ Non-Functional Requirements (keep light)
+
+Only mention these briefly:
+
+System should handle concurrent bookings
+
+System should be consistent (no double bookings)
+
+Read-heavy system (search & availability)
+
+⚠️ Do NOT talk about scalability, sharding, microservices unless asked.
+
+3️⃣ What is OUT OF SCOPE (say this explicitly)
+
+This is very important in Amazon interviews.
+
+“I’ll keep the following out of scope unless required:”
+
+Payments
+
+Reviews & ratings
+
+Waitlist
+
+Notifications (SMS/email)
+
+Dynamic pricing
+
+Recommendation engine
+
+🧠 Interviewer thought:
+
+“Candidate can control scope.”
+
+4️⃣ Clarifying Questions (ask 2–3 max)
+
+Ask these before design:
+
+Is booking always table-based, or can we auto-assign tables?
+
+Is booking per table or per restaurant (any table)?
+
+Is overlapping booking allowed if capacity permits?
+
+Usually interviewer says:
+
+“Assume table-based booking, auto-assignment allowed.”
+
+5️⃣ Fixed assumptions (state them clearly)
+
+If interviewer doesn’t answer everything, say:
+
+Booking duration = 2 hours
+
+One booking → one table
+
+One user can have multiple bookings
+
+Time slots are fixed (e.g., 6–8, 8–10)
+
+These assumptions are perfectly acceptable.
+
+6️⃣ What interviewer EXPECTS next (important)
+
+After requirements, interviewer expects you to:
+
+List core entities
+
+Add attributes with proper data types
+
+Define APIs
+
+Design DB schema
+
+Implement one core flow (e.g., create booking)
+
+We’ll do that step by step.
+
+7️⃣ Your turn (do this next)
+
+👉 Next step:
+List the core entities only (no code yet).
+
+Example format (don’t copy, just format):
+
+Restaurant
+Table
+Booking
+User
+
+
+You list:
+
+Entity name
+
+4–6 attributes each (with data types)
+
+Send that, and I’ll evaluate like an Amazon interviewer and guide you to the next step.
+
+Take 5–10 minutes — no rush 👍

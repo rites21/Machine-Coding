@@ -1,0 +1,22 @@
+
+Payment System — Confirmed Requirements
+
+1. We are designing the payment-processing component for a merchant platform.
+2. Customer can pay using:
+- UPI
+- Card
+- Net Banking
+3. Actual payment execution is handled by an external bank/payment provider.
+4. Our system should interact with that external provider.
+5. New payment methods should be easy to add without significantly modifying existing payment-processing logic.
+6. Scope is currently making/processing a payment only.
+7. Refunds/cancellations are out of scope.
+8. Payment processing can receive concurrent requests.
+9. For initial LLD, ignore:
+- Database
+- Kafka
+- Redis
+- API Gateway
+- Load balancer
+- Deployment/infrastructure
+10. We need to focus on classes, responsibilities, relationships, abstraction, extensibility and concurrency.
