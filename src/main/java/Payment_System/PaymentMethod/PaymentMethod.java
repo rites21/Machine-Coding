@@ -1,7 +1,9 @@
 package Payment_System.PaymentMethod;
 
 import Payment_System.Entity.Payment;
+import Payment_System.Entity.PaymentResult;
 
 public interface PaymentMethod {
-    void pay(Payment payment);
+
+    PaymentResult pay(Payment payment);
 }
