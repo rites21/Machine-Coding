@@ -1,0 +1,18 @@
+# Build output
+target/
+*.class
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated preparation artifacts
+/tmp/pdfs/*.png
+/output/pdf/*.pdf
